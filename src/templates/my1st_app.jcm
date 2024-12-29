@@ -1,0 +1,4 @@
+mas my1st_app {
+    agent alice
+    agent bob
+}

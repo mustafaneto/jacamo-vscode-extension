@@ -1,0 +1,38 @@
+{
+  "name": "jacamo-vscode-extension",
+  "displayName": "JaCaMo VSCode Extension",
+  "description": "A Visual Studio Code extension to streamline the process of setting up and managing JaCaMo projects.",
+  "version": "0.1.0",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "activationEvents": [
+    "onCommand:jacamo.runProject",
+    "onCommand:jacamo.createProject"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./out/compile.js"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "jacamo.runProject",
+        "title": "Run JaCaMo Project"
+      },
+      {
+        "command": "jacamo.createProject",
+        "title": "Create JaCaMo Project"
+      }
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "vscode": "^1.1.36",
+    "unzipper": "^0.10.11"
+  }
+}

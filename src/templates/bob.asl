@@ -1,0 +1,1 @@
++greeting(M)[source(A)] <- .print("I received ",M," from ",A).
